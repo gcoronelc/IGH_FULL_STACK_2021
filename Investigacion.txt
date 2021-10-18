@@ -1,5 +1,13 @@
 -- Parte 1
 -------------------------------------------
+GRUPO 04 - Practica 1 - 19/10/2021
+GRUPO 03 - Practica 2 - 19/10/2021
+GRUPO 02 - Practica 3 - 22/10/2021
+GRUPO 01 - Practica 4 - 22/10/2021
+
+
+-- Parte 2
+-------------------------------------------
 - Archivos Log
 - Pruebas Unitarias
 - Patrones Factory
