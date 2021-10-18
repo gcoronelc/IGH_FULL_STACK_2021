@@ -1,5 +1,7 @@
 package aprendiendojava;
 
+import java.util.Scanner;
+
 /**
  * @author Eric Gustavo Coronel Castillo
  * @blog www.desarrollasoftware.com
