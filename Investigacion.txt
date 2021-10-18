@@ -1,0 +1,10 @@
+-- Parte 1
+-------------------------------------------
+- Archivos Log
+- Pruebas Unitarias
+- Patrones Factory
+- Manejo de Datos Genericos (Generic)
+- Expresiones regulares
+- Java Reflection
+
+
