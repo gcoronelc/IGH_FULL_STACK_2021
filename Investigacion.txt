@@ -8,11 +8,14 @@ GRUPO 01 - Practica 4 - 22/10/2021
 
 -- Parte 2
 -------------------------------------------
-- Archivos Log
-- Pruebas Unitarias
+- Pruebas Unitarias     --  Grupo 03
+- Archivos Log          --  Grupo 02
+- Java Reflection       --  Grupo 04
+- Manejo de Datos Genericos (Generic) -- Grupo 01
+
+
 - Patrones Factory
-- Manejo de Datos Genericos (Generic)
 - Expresiones regulares
-- Java Reflection
+
 
 
