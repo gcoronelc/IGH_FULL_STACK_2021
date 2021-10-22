@@ -8,10 +8,10 @@ GRUPO 01 - Practica 4 - 22/10/2021
 
 -- Parte 2
 -------------------------------------------
-- Pruebas Unitarias     --  Grupo 03
-- Archivos Log          --  Grupo 02
-- Java Reflection       --  Grupo 03
-- Manejo de Datos Genericos (Generic) -- Grupo 01
+- Pruebas Unitarias     --  Grupo 03 -- 26/10/21
+- Archivos Log          --  Grupo 02 -- 26/10/2021
+- Java Reflection       --  Grupo 03 -- 29/10/2021
+- Manejo de Datos Genericos (Generic) -- Grupo 01  -- 29/10/21
 
 
 
