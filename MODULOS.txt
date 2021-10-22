@@ -1,4 +1,4 @@
-FUNDAMENTOS DE PROGRAMACIÓN (12)
+FUNDAMENTOS DE PROGRAMACIÓN (12) (NB)
 ---------------------------------------
 - Tipos de datos
 - Entrada y Salida
@@ -9,8 +9,8 @@ FUNDAMENTOS DE PROGRAMACIÓN (12)
 
   
   
-- Java Orientado a Objetos (16)
-- Java Base de Datos (16)
-- Java Web (16)
+- Java Orientado a Objetos (16)  (NB)
+- Java Base de Datos (16) (NB)
+- Java Web (16) (Eclipse)
 - Spring Boot (20)
 - Spring Bott REST (20)
