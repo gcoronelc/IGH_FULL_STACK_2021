@@ -13,8 +13,11 @@ import javax.swing.JOptionPane;
 public class AprendiendoJava {
 
 	public static void main(String[] args) {
-		// Aplicaciones de escritorio
-		JOptionPane.showMessageDialog(null, "Error .... ayuda ...");
+		int x = 5;
+int y = 5;
+y /= ++x;
+System.out.println(x);
+
 	}
 
 }
