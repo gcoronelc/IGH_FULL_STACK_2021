@@ -20,9 +20,8 @@ public class PagoLaboralViewV2 extends javax.swing.JFrame {
 
 	public PagoLaboralViewV2() {
 		initComponents();
-		pagoLaboralService = new PagoLaboralService();
+		pagoLaboralService = new PagoLaboralService(); // ¿Qué esta pasando?
 		setEditMode(true);
-
 	}
 
 	/**
