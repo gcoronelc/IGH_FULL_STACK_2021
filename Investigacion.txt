@@ -1,12 +1,12 @@
--- Parte 1
+-- Parte 1: Fundamentos
 -------------------------------------------
-GRUPO 04 - Practica 1 - 19/10/2021
-GRUPO 03 - Practica 2 - 19/10/2021
-GRUPO 02 - Practica 3 - 22/10/2021
-GRUPO 01 - Practica 4 - 22/10/2021
+- GRUPO 04 - Practica 1 - 19/10/2021
+- GRUPO 03 - Practica 2 - 19/10/2021
+- GRUPO 02 - Practica 3 - 22/10/2021
+- GRUPO 01 - Practica 4 - 22/10/2021
 
 
--- Parte 2
+-- Parte 2: Orientación a Objetos
 -------------------------------------------
 - Pruebas Unitarias     --  Grupo 03 -- 26/10/21
 - Archivos Log          --  Grupo 02 -- 26/10/2021
