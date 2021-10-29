@@ -1,8 +1,7 @@
 package pruebas;
 
-import modelo.Matematica;
-import modelo.Matematica1;
-import modelo.Matematica2;
+import modelo.IMatematica;
+import modelo.MatematicaService;
 
 /**
  * @author Eric Gustavo Coronel Castillo
@@ -12,16 +11,17 @@ import modelo.Matematica2;
  * @facebook www.facebook.com/groups/desarrollasoftware/
  * @cursos gcoronelc.github.io
  */
-public class Prueba06 {
+public class Prueba07 {
 
     public static void main(String[] args) {
 		 
-		 Matematica obj = new Matematica2();
+		 IMatematica obj = new MatematicaService();
 		 
-		 System.out.println("7 + 5 = " + obj.sumar(7, 5));
-		 System.out.println("7 * 5 = " + obj.multiplicar(7, 5));
+		 System.out.println("Suma: " + obj.sumar(5,6,7,8));
+		 System.out.println("Factorial: " + obj.factorial(6));
 		 
-		
+		 IMatematica.NOMBRE = "Angel";
+		 System.out.println("Nombre: " + IMatematica.NOMBRE);
         
     }
 
