@@ -187,7 +187,8 @@ public class FormMDI extends javax.swing.JFrame {
 
 			// Crear instancia
 			if (view == null) {
-				view = (JInternalFrame) Class.forName(aClass.getName()).newInstance();
+				//view = (JInternalFrame) Class.forName(aClass.getName()).newInstance();
+				view = (JInternalFrame) aClass.getConstructor().newInstance();
 				desktopPane.add(view);
 				view.setVisible(true);
 			}
