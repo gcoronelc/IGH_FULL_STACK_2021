@@ -21,9 +21,18 @@
 - Expresiones Lambda y Strem: Grupo 02
 
 
+-- Parte 4: (12/NOV/2021)
+-----------------------------------------------------------------
+- Expresiones regulares: Grupo 03
+- Patron DAO: Grupo 01
+- Manejo de claves seguras en la BD Oracle: Grupo 02
+
+
+
+
 
 - Patrones Factory
-- Expresiones regulares
+- 
 
 
 
