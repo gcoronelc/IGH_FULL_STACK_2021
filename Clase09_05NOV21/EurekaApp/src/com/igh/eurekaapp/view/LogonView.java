@@ -1,6 +1,7 @@
 package com.igh.eurekaapp.view;
 
 import com.igh.eurekaapp.controller.LogonController;
+import com.igh.eurekaapp.util.Mensaje;
 import javax.swing.JOptionPane;
 
 /**
@@ -70,8 +71,10 @@ public class LogonView extends javax.swing.JDialog {
       jLabel2.setText("Usuario:");
 
       txtUsuario.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+      txtUsuario.setText("cromero");
 
       txtClave.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+      txtClave.setText("chicho");
 
       javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
       jPanel2.setLayout(jPanel2Layout);
@@ -191,7 +194,7 @@ public class LogonView extends javax.swing.JDialog {
 			MainView.main(null);
 			this.dispose();
 		} catch (Exception e) {
-			JOptionPane.showMessageDialog(null, e.getMessage());
+			Mensaje.error(this, e.getMessage());
 		}
    }//GEN-LAST:event_btnIngresarActionPerformed
 

@@ -3,6 +3,7 @@ package com.igh.eurekaapp.controller;
 import com.igh.eurekaapp.dto.EmpleadoDto;
 import com.igh.eurekaapp.service.LogonService;
 import com.igh.eurekaapp.service.impl.LogonServiceImpl;
+import com.igh.eurekaapp.util.Session;
 
 /**
  * @author Eric Gustavo Coronel Castillo
@@ -14,8 +15,9 @@ import com.igh.eurekaapp.service.impl.LogonServiceImpl;
  */
 public class LogonController {
 
-	public void validar(String usuario, String clave){
+	public void validar(String usuario, String clave) {
 		LogonService logonService = new LogonServiceImpl();
-		logonService.validar(usuario, clave);
+		EmpleadoDto dto = logonService.validar(usuario, clave);
+		Session.put("USUARIO", dto);
 	}
 }
