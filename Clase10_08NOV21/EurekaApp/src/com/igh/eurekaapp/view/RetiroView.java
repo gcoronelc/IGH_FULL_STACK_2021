@@ -52,7 +52,8 @@ public class RetiroView extends javax.swing.JInternalFrame {
 
       jToolBar1.setRollover(true);
 
-      btnGrabar.setText("Grabar");
+      btnGrabar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/igh/eurekaapp/img/grabar.png"))); // NOI18N
+      btnGrabar.setToolTipText("Grabar");
       btnGrabar.setFocusable(false);
       btnGrabar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
       btnGrabar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -63,7 +64,8 @@ public class RetiroView extends javax.swing.JInternalFrame {
       });
       jToolBar1.add(btnGrabar);
 
-      btnCancelar.setText("Cancelar");
+      btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/igh/eurekaapp/img/cancelar.png"))); // NOI18N
+      btnCancelar.setToolTipText("Cancelar");
       btnCancelar.setFocusable(false);
       btnCancelar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
       btnCancelar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);

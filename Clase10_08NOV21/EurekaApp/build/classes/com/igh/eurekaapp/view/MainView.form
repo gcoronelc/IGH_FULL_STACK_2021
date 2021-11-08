@@ -97,6 +97,14 @@
             <Property name="text" type="java.lang.String" value="Procesos"/>
           </Properties>
           <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="menuProcesoDeposito">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Dep&#xf3;sito"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuProcesoDepositoActionPerformed"/>
+              </Events>
+            </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="menuProcesoRetiro">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Retiro"/>

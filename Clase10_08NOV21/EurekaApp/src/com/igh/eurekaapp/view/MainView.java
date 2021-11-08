@@ -53,6 +53,7 @@ public class MainView extends javax.swing.JFrame {
       contentMenuItem = new javax.swing.JMenuItem();
       aboutMenuItem = new javax.swing.JMenuItem();
       menuProcesos = new javax.swing.JMenu();
+      menuProcesoDeposito = new javax.swing.JMenuItem();
       menuProcesoRetiro = new javax.swing.JMenuItem();
 
       setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -120,6 +121,14 @@ public class MainView extends javax.swing.JFrame {
 
       menuProcesos.setText("Procesos");
 
+      menuProcesoDeposito.setText("Depósito");
+      menuProcesoDeposito.addActionListener(new java.awt.event.ActionListener() {
+         public void actionPerformed(java.awt.event.ActionEvent evt) {
+            menuProcesoDepositoActionPerformed(evt);
+         }
+      });
+      menuProcesos.add(menuProcesoDeposito);
+
       menuProcesoRetiro.setText("Retiro");
       menuProcesoRetiro.addActionListener(new java.awt.event.ActionListener() {
          public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -153,6 +162,10 @@ public class MainView extends javax.swing.JFrame {
    private void menuProcesoRetiroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuProcesoRetiroActionPerformed
       mostrarForm(RetiroView.class);
    }//GEN-LAST:event_menuProcesoRetiroActionPerformed
+
+   private void menuProcesoDepositoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuProcesoDepositoActionPerformed
+      mostrarForm(DepositoView.class);
+   }//GEN-LAST:event_menuProcesoDepositoActionPerformed
 
 	/**
 	 * @param args the command line arguments
@@ -201,6 +214,7 @@ public class MainView extends javax.swing.JFrame {
    private javax.swing.JMenu fileMenu;
    private javax.swing.JMenu helpMenu;
    private javax.swing.JMenuBar menuBar;
+   private javax.swing.JMenuItem menuProcesoDeposito;
    private javax.swing.JMenuItem menuProcesoRetiro;
    private javax.swing.JMenu menuProcesos;
    private javax.swing.JMenuItem openMenuItem;

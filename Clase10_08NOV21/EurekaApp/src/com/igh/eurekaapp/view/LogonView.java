@@ -44,7 +44,8 @@ public class LogonView extends javax.swing.JDialog {
       setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
       setTitle("INGRESO AL SISTEMA");
 
-      jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/igh/eurekaapp/img/usuario.jpg"))); // NOI18N
+      jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+      jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/igh/eurekaapp/img/Usuario.png"))); // NOI18N
       jLabel3.setPreferredSize(new java.awt.Dimension(300, 300));
 
       javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -53,7 +54,7 @@ public class LogonView extends javax.swing.JDialog {
          jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
          .addGroup(jPanel1Layout.createSequentialGroup()
             .addGap(11, 11, 11)
-            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 225, Short.MAX_VALUE)
+            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 225, Short.MAX_VALUE)
             .addContainerGap())
       );
       jPanel1Layout.setVerticalGroup(

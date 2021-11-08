@@ -26,4 +26,9 @@ public class CuentaController {
 		cuentaService.procRetiro(cuenta, importe, clave, dto.getCodigo());
 	}
 
+	public void procDeposito(String cuenta, Double importe) {
+		EmpleadoDto dto = (EmpleadoDto) Session.get("USUARIO");
+		cuentaService.procDeposito(cuenta, importe, dto.getCodigo());
+	}
+
 }
