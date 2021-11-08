@@ -28,7 +28,6 @@ public class LogonServiceImpl implements LogonService {
 				  + "VCH_EMPLNOMBRE, VCH_EMPLCIUDAD, VCH_EMPLDIRECCION, VCH_EMPLUSUARIO,"
 				  + "'******' VCH_EMPLCLAVE from eureka.empleado "
 				  + "where vch_emplusuario = ? and vch_emplclave = ?";
-		System.err.println(sql);
 		try {
 			cn = AccesoDB.getConnection();
 			pstm = cn.prepareStatement(sql);
