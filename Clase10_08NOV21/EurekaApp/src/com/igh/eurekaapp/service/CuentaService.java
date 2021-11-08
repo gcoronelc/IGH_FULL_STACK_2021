@@ -17,4 +17,6 @@ public interface CuentaService {
 
 	public void procRetiro(String cuenta, Double importe, String clave, String empleado);
 	
+	public void procDeposito(String cuenta, Double importe, String empleado);
+	
 }

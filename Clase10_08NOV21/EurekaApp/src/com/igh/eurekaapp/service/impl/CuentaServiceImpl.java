@@ -95,4 +95,37 @@ public class CuentaServiceImpl implements CuentaService {
 		}
 	}
 
+	@Override
+	public void procDeposito(String cuenta, Double importe, String empleado) {
+		Connection cn = null;
+		try {
+			// Obtener el objeto connection
+			cn = AccesoDB.getConnection();
+			// Cancelar el control de transacciones
+			// La Tx se controla en el SP
+			cn.setAutoCommit(true);
+			// Proceso
+			String sql = "{call eureka.usp_egcc_deposito(?,?,?)}";
+			CallableStatement cstm = cn.prepareCall(sql);
+			cstm.setString(1, cuenta);
+			cstm.setDouble(2, importe);
+			cstm.setString(3, empleado);
+			cstm.executeUpdate();
+			cstm.close();
+		} catch (SQLException e) {
+			// Propagar excepcion
+			throw new RuntimeException(e.getMessage());
+		} catch (Exception e) {
+			// Propagar excepcion
+			throw new RuntimeException("Error en el proceso, intentelo mas tarde.");
+		} finally {
+			try {
+				if (cn != null) {
+					cn.close();
+				}
+			} catch (Exception e) {
+			}
+		}
+	}
+
 }
