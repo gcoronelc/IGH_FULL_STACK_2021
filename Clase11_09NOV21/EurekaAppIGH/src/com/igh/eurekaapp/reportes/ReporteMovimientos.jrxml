@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteMovimientos" pageWidth="595" pageHeight="842" columnWidth="483" leftMargin="56" rightMargin="56" topMargin="56" bottomMargin="56" uuid="be1db62e-6659-4113-ae62-db15a2af8e5e">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ORACLE-EUREKA"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<queryString language="SQL">
+		<![CDATA[select sucucodigo, sucunombre, cliecodigo, cliepaterno,
+cliematerno, clienombre, cuencodigo, cuensaldo,
+cuenestado, movinumero, movifecha, moviimporte,
+cuenreferencia, tipocodigo, tiponombre, tipoaccion,
+monecodigo, monenombre from EUREKA.v_movimientos]]>
+	</queryString>
+	<field name="SUCUCODIGO" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="SUCUCODIGO"/>
+		<property name="com.jaspersoft.studio.field.label" value="SUCUCODIGO"/>
+	</field>
+	<field name="SUCUNOMBRE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="SUCUNOMBRE"/>
+		<property name="com.jaspersoft.studio.field.label" value="SUCUNOMBRE"/>
+	</field>
+	<field name="CLIECODIGO" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="CLIECODIGO"/>
+		<property name="com.jaspersoft.studio.field.label" value="CLIECODIGO"/>
+	</field>
+	<field name="CLIEPATERNO" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="CLIEPATERNO"/>
+		<property name="com.jaspersoft.studio.field.label" value="CLIEPATERNO"/>
+	</field>
+	<field name="CLIEMATERNO" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="CLIEMATERNO"/>
+		<property name="com.jaspersoft.studio.field.label" value="CLIEMATERNO"/>
+	</field>
+	<field name="CLIENOMBRE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="CLIENOMBRE"/>
+		<property name="com.jaspersoft.studio.field.label" value="CLIENOMBRE"/>
+	</field>
+	<field name="CUENCODIGO" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="CUENCODIGO"/>
+		<property name="com.jaspersoft.studio.field.label" value="CUENCODIGO"/>
+	</field>
+	<field name="CUENSALDO" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="CUENSALDO"/>
+		<property name="com.jaspersoft.studio.field.label" value="CUENSALDO"/>
+	</field>
+	<field name="CUENESTADO" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="CUENESTADO"/>
+		<property name="com.jaspersoft.studio.field.label" value="CUENESTADO"/>
+	</field>
+	<field name="MOVINUMERO" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="MOVINUMERO"/>
+		<property name="com.jaspersoft.studio.field.label" value="MOVINUMERO"/>
+	</field>
+	<field name="MOVIFECHA" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="MOVIFECHA"/>
+		<property name="com.jaspersoft.studio.field.label" value="MOVIFECHA"/>
+	</field>
+	<field name="MOVIIMPORTE" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="MOVIIMPORTE"/>
+		<property name="com.jaspersoft.studio.field.label" value="MOVIIMPORTE"/>
+	</field>
+	<field name="CUENREFERENCIA" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="CUENREFERENCIA"/>
+		<property name="com.jaspersoft.studio.field.label" value="CUENREFERENCIA"/>
+	</field>
+	<field name="TIPOCODIGO" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="TIPOCODIGO"/>
+		<property name="com.jaspersoft.studio.field.label" value="TIPOCODIGO"/>
+	</field>
+	<field name="TIPONOMBRE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="TIPONOMBRE"/>
+		<property name="com.jaspersoft.studio.field.label" value="TIPONOMBRE"/>
+	</field>
+	<field name="TIPOACCION" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="TIPOACCION"/>
+		<property name="com.jaspersoft.studio.field.label" value="TIPOACCION"/>
+	</field>
+	<field name="MONECODIGO" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="MONECODIGO"/>
+		<property name="com.jaspersoft.studio.field.label" value="MONECODIGO"/>
+	</field>
+	<field name="MONENOMBRE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="MONENOMBRE"/>
+		<property name="com.jaspersoft.studio.field.label" value="MONENOMBRE"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="127" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout"/>
+			<staticText>
+				<reportElement x="0" y="0" width="160" height="30" uuid="13b2ea05-35b0-406e-bf40-222d7e44bbfe"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EUREKA BANK]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="120" y="80" width="100" height="30" uuid="d58b7064-4444-446e-aac6-58f65da0d20e"/>
+				<textFieldExpression><![CDATA[$F{MONENOMBRE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="80" width="100" height="30" uuid="45ac0729-c41a-45e4-b0a5-24fdef142b6c"/>
+				<text><![CDATA[Moneda]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="80" width="100" height="30" uuid="18725b8f-fa06-43e9-bdc8-b036661d9ffd"/>
+				<text><![CDATA[Saldo]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="350" y="80" width="100" height="30" uuid="f532bbe5-a960-4420-91a2-cd950a894302"/>
+				<textFieldExpression><![CDATA[$F{CUENSALDO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="30" width="440" height="30" uuid="de8c3b58-6880-43d7-a442-6c7ee63b583a"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA["MOVIMIENTOS DE LA CUENTA " + $F{CUENCODIGO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="34" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="30" uuid="3e9321bf-1878-4f6e-af2a-42e6ab0c6dd8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="08805622-212f-45e9-872d-fa757fbede4a"/>
+				</reportElement>
+				<text><![CDATA[MOVINUMERO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="0" width="100" height="30" uuid="f3a8ad64-9d1e-4047-be20-5063db2b4675">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="87395831-8ad3-41c0-b82c-6ca66aa0caef"/>
+				</reportElement>
+				<text><![CDATA[TIPONOMBRE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="0" width="100" height="30" uuid="0aa5801a-700a-42c1-a1f5-f8f8cf6d257d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="61eb5296-7b74-4615-98ff-6e8b31aeea2f"/>
+				</reportElement>
+				<text><![CDATA[MOVIIMPORTE]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="-1" width="100" height="30" uuid="7e929c59-d7a1-4e40-8fa3-98d0d81d752e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="08805622-212f-45e9-872d-fa757fbede4a"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{MOVINUMERO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="-1" width="100" height="30" uuid="69d6e061-0f9c-4280-9642-058bce9f1369">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="87395831-8ad3-41c0-b82c-6ca66aa0caef"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{TIPONOMBRE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="-1" width="100" height="30" uuid="86afb4bf-7e6a-4f3c-bec7-372d9b085840">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="61eb5296-7b74-4615-98ff-6e8b31aeea2f"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{MOVIIMPORTE}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
