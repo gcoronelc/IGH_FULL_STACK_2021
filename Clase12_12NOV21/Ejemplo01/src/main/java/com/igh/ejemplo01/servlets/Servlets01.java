@@ -17,6 +17,16 @@ public class Servlets01 extends HttpServlet {
 
 	@Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String path = request.getServletPath();
+		switch (path) {
+			case "/cambiar":
+				reponseCaso1(request, response);
+				break;
+
+		}
+	}
+
+	private void reponseCaso1(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		// Datos
 		int soles = Integer.parseInt(request.getParameter("soles"));
 		// Proceso
@@ -30,7 +40,7 @@ public class Servlets01 extends HttpServlet {
 		out.println("<title>CAMBIO</title>");
 		out.println("</head>");
 		out.println("<body>");
-		out.println("<h1>" + soles	+ " soles equivale a " + dolares + " Dolares");
+		out.println("<h1>" + soles + " soles equivale a " + dolares + " Dolares");
 		out.println("</body>");
 		out.println("</html>");
 		out.flush();
