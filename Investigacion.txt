@@ -28,6 +28,11 @@
 - Manejo de claves seguras en la BD Oracle: Grupo 02
 
 
+-- Parte 5: (19/NOV/2021)
+-----------------------------------------------------------------
+- Tecnología JSON: Grupo 02
+- Tecnologia YAML: Grupo 03
+- Tecnología XML: Grupo 01
 
 
 

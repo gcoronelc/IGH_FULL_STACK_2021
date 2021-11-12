@@ -2,7 +2,6 @@ package com.igh.eurekaapp.view;
 
 import com.igh.eurekaapp.controller.LogonController;
 import com.igh.eurekaapp.util.Mensaje;
-import javax.swing.JOptionPane;
 
 /**
  * @author Eric Gustavo Coronel Castillo
@@ -45,6 +44,7 @@ public class LogonView extends javax.swing.JDialog {
       setTitle("INGRESO AL SISTEMA");
 
       jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+      jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Usuario.png"))); // NOI18N
       jLabel3.setPreferredSize(new java.awt.Dimension(300, 300));
 
       javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -60,7 +60,7 @@ public class LogonView extends javax.swing.JDialog {
          jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
          .addGroup(jPanel1Layout.createSequentialGroup()
             .addGap(9, 9, 9)
-            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE)
+            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
             .addContainerGap())
       );
 
@@ -108,6 +108,7 @@ public class LogonView extends javax.swing.JDialog {
       );
 
       btnSalir.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+      btnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/salir.png"))); // NOI18N
       btnSalir.setText("Salir");
       btnSalir.addActionListener(new java.awt.event.ActionListener() {
          public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -116,6 +117,7 @@ public class LogonView extends javax.swing.JDialog {
       });
 
       btnIngresar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+      btnIngresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Ingresar.png"))); // NOI18N
       btnIngresar.setText("Ingresar");
       btnIngresar.addActionListener(new java.awt.event.ActionListener() {
          public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -6,7 +6,6 @@ import java.io.InputStream;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import javax.swing.table.DefaultTableModel;
 import net.sf.jasperreports.engine.JasperCompileManager;
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
@@ -123,7 +122,7 @@ public class ReporteMovimientosView extends javax.swing.JInternalFrame {
 		  // Preparar reporte
 		  JRMapCollectionDataSource data = new JRMapCollectionDataSource(lista);
 		  Map pars = new HashMap();
-		  String reporte = "/com/igh/eurekaapp/reportes/ReporteMovimientos.jrxml";
+		  String reporte = "/reportes/ReporteMovimientos.jrxml";
 		  InputStream is = Class.class.getResourceAsStream(reporte);
 		  if(is == null){
 			  throw new RuntimeException("No carga el reporte.");
