@@ -13,10 +13,15 @@
 	</head>
 	<body>
 		<h1>SOLES A DOLARES</h1>
-		<form method="post" action="cambia">
-			<label>Soles:</label>
-			<input type="text" name="soles" />
-			<input type="submit" value="Enviar" />
-		</form>
+		<table>
+			<tr>
+				<td>Soles</td>
+				<td>${soles}</td>
+			</tr>
+			<tr>
+				<td>Dolares</td>
+				<td>${dolares}</td>
+			</tr>
+		</table>
 	</body>
 </html>
