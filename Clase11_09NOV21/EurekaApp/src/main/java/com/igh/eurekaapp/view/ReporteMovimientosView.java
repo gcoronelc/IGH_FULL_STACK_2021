@@ -124,9 +124,11 @@ public class ReporteMovimientosView extends javax.swing.JInternalFrame {
 		  Map pars = new HashMap();
 		  String reporte = "/reportes/ReporteMovimientos.jrxml";
 		  InputStream is = Class.class.getResourceAsStream(reporte);
+		  /*
 		  if(is == null){
 			  throw new RuntimeException("No carga el reporte.");
 		  }
+*/
 		  JasperReport rep = JasperCompileManager.compileReport(is);
 		  JasperPrint print = JasperFillManager.fillReport(rep, pars, data);
 		  // Mostrar Reporte
