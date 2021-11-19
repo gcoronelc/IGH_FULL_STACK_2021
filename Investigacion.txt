@@ -35,9 +35,16 @@
 - Tecnología XML: Grupo 01
 
 
+-- Parte 5: (26/NOV/2021)
+-----------------------------------------------------------------
+- Angular: Grupo 03
+- React: Grupo 02
+- Vue: Grupo 01
 
-- Patrones Factory
-- 
-
+-- Parte 5: (03/DIC/2021)
+-----------------------------------------------------------------
+- Demo Spring Boot
+- Demo Spring Boot
+- Demo Spring Boot
 
 
