@@ -2,9 +2,7 @@ package com.igh.eurekaapp.prueba;
 
 import com.igh.eurekaapp.dto.EmpleadoDto;
 import com.igh.eurekaapp.service.CrudService;
-import com.igh.eurekaapp.service.CuentaService;
 import com.igh.eurekaapp.service.impl.CrudEmpleadoImpl;
-import com.igh.eurekaapp.service.impl.CuentaServiceImpl;
 
 /**
  * @author Eric Gustavo Coronel Castillo
