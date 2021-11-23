@@ -23,7 +23,7 @@
 			<div class="card">
 				<div class="card-header">${datos}</div>
 				<div class="card-body">
-					<form method="post" action="procesar3">
+					<form method="post" action="procesar5">
 
 						<div class="form-group row">
 							<label for="precio" class="col-sm-2 col-form-label">Precio</label>
@@ -57,7 +57,7 @@
 		<c:if test="${reporte != null}">
 
 			<div class="card">
-				<div class="card-header">${reporte}</div>
+				<div class="card-header">${reporte} - ${service}</div>
 				<div class="card-body">
 					<form method="get" action="home">
 
