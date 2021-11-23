@@ -1,16 +1,29 @@
 package com.desarrollasoftware.app.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.desarrollasoftware.app.dto.ProductoDto;
+import com.desarrollasoftware.app.dto.VentaDto;
+import com.desarrollasoftware.app.service.VentaService;
 
 @Controller
 public class AppController {
+	
+	@Autowired
+	private VentaService ventaService;
 
 	@GetMapping(value = {"/","/home"})
 	public String home(Model model) {
@@ -151,6 +164,64 @@ public class AppController {
 		mav.addObject("reporte", "REPORTE DE CALCULO");
 		
 		return mav;
+	}
+	
+	
+	@GetMapping(value = {"/venta"})
+	public String venta(Model model) {
+		
+		model.addAttribute("titulo", "CALCULO DE UNA VENTA");
+		model.addAttribute("datos", "DATOS DE LA VENTA");
+		
+		return "venta";
+	}
+	
+	@PostMapping(value = "/procesar6")
+	public ModelAndView procesar6(@ModelAttribute VentaDto ventaDto) {
+		
+		// Proceso
+		ventaDto = ventaService.procesar(ventaDto);
+		
+		// Reporte con ModelAndView
+		ModelAndView mav = new ModelAndView("venta");
+		mav.addObject("service", "procesar6");
+		mav.addObject("ventaDto", ventaDto);
+
+		
+		mav.addObject("titulo", "CALCULO DE UNA VENTA");
+		mav.addObject("reporte", "REPORTE DE CALCULO");
+		
+		return mav;
+	}
+	
+	@GetMapping(value = "/procesar7", produces = "application/json; charset=UTF-8")
+	@ResponseBody
+	public VentaDto procesar7(@ModelAttribute VentaDto ventaDto) {
+		
+		// Proceso
+		ventaDto = ventaService.procesar(ventaDto);
+		
+		// Reporte con ModelAndView
+		ModelAndView mav = new ModelAndView("venta");
+		mav.addObject("service", "procesar6");
+		mav.addObject("ventaDto", ventaDto);
+		
+		return ventaDto;
+	}
+	
+	@GetMapping(value = "/procesar8", produces = "application/json; charset=UTF-8")
+	@ResponseBody
+	public List<ProductoDto> procesar8() {
+		
+		// Dato
+		List<ProductoDto> lista = new ArrayList<>();
+		lista.add(new ProductoDto("Producto 1", 500.0));
+		lista.add(new ProductoDto("Producto 2", 400.0));
+		lista.add(new ProductoDto("Producto 3", 300.0));
+		lista.add(new ProductoDto("Producto 4", 600.0));
+		lista.add(new ProductoDto("Producto 5", 700.0));
+		
+		return lista;
 	}
 	
 }
