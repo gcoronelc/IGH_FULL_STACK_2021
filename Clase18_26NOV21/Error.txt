@@ -1,0 +1,2 @@
+Failed to execute goal org.apache.felix:maven-bundle-plugin:4.0.0:bundle (default-bundle) on project RBVDR001: Ex
+ecution default-bundle of goal org.apache.felix:maven-bundle-plugin:4.0.0:bundle failed.: ConcurrentModificationException

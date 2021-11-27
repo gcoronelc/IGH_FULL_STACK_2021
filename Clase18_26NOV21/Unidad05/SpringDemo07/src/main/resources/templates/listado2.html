@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title th:text="${titulo}">Insert title here</title>
+</head>
+<body>
+	<h1 th:text="${titulo}">Cualquier texto</h1>
+
+	<h3>LISTA</h3>
+
+	<div>
+		<ul>
+			<li th:each="prod : ${productos}"
+				th:text="${prod.id} + ' - ' + ${prod.nombre}"></li>
+		</ul>
+	</div>
+
+	<H3>TABLA</H3>
+	<table border="1" th:if="${productos != null}">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>NOMBRE</th>
+				<th>PRECIO</th>
+				<th>STOCK</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="prod : ${productos}">
+				<td th:text="${prod.id}"></td>
+				<td th:text="${prod.nombre}"></td>
+				<td th:text="${prod.precio}"></td>
+				<td th:text="${prod.stock}"></td>
+			</tr>
+		</tbody>
+
+	</table>
+	<div th:unless = "${productos != null}">
+		No hay productos que mostrar.
+	</div>
+
+</body>
+</html>

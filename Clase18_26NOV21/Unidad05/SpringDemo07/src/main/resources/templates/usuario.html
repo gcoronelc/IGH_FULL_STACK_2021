@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title th:text="${titulo}">Insert title here</title>
+</head>
+<body>
+	
+	<h1 th:text="${titulo}">Cualquier texto</h1>
+	
+	
+	<div>
+		<p>ID: <span th:text="${user.id}"></span> </p>
+		<p>NOMBRE: <span th:text="${user.name}"></span> </p>
+		<p>ROL:
+			<th:block th:switch="${user.role}">
+				<span th:case="'admin'">User is an administrator</span>
+				<span th:case="'manager'">User is a manager</span>
+				<span th:case="'staff'">User is a staff</span>
+				<span th:case="*">User is some other thing</span>
+			</th:block>
+		</p>
+	</div>
+	
+
+</body>
+</html>
