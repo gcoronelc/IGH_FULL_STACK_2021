@@ -41,12 +41,18 @@ public class AppController {
 		productos.add(new Producto(1005, "Producto E", 634.00, 649));
 		model.addAttribute("titulo", "Listado de Productos");
 		model.addAttribute("productos", productos);
-		return "listado";
+		return "listado2";
+	}
+	
+	@GetMapping("/datos")
+	public String datos(Model model) {
+		model.addAttribute("ver", 1);
+		return "datos";
 	}
 
 	@GetMapping("/usuario")
 	public String datosUsuario(Model model) {
-		User user = new User(1000, "Gustavo", "proveedor");
+		User user = new User(1000, "Gustavo", "admin");
 		model.addAttribute("titulo", "Datos del Usuario");
 		model.addAttribute("user", user);
 		return "usuario";

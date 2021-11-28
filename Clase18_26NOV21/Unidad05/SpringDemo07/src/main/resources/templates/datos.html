@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>DATOS</h1>
+
+	<div th:if="${ver == 1}">
+		<p>Nombre: Gustavo</p>
+		<p>Apellido: Coronel</p>	
+	</div>
+
+
+	<th:block th:if="${ver == 1}">
+		<p>Nombre: Gustavo</p>
+		<p>Apellido: Coronel</p>	
+	</th:block>
+	
+</body>
+</html>

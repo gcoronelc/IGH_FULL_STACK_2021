@@ -16,7 +16,7 @@
 		</ul>
 	</div>
 
-	<H3>TABLA</H3>
+	<H3>TABLA - A</H3>
 	<table border="1" th:if="${productos != null}">
 		<thead>
 			<tr>
@@ -34,11 +34,33 @@
 				<td th:text="${prod.stock}"></td>
 			</tr>
 		</tbody>
-
 	</table>
-	<div th:unless = "${productos != null}">
-		No hay productos que mostrar.
-	</div>
+
+	<H3>TABLA - B</H3>
+	<table border="1" th:if="${productos != null}">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>NOMBRE</th>
+				<th>PRECIO</th>
+				<th>STOCK</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="prod : ${productos}">
+				<th:block th:object="${prod}">
+					<td th:text="*{id}"></td>
+					<td th:text="*{nombre}"></td>
+					<td th:text="*{precio}"></td>
+					<td th:text="*{stock}"></td>
+				</th:block>
+			</tr>
+		</tbody>
+	</table>
+
+
+	<div th:unless="${productos != null}">No hay productos que
+		mostrar.</div>
 
 </body>
 </html>
