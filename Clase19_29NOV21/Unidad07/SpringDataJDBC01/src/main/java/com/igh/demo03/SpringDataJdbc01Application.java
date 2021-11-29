@@ -1,5 +1,7 @@
 package com.igh.demo03;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -9,8 +11,8 @@ import com.igh.demo03.model.Cliente;
 import com.igh.demo03.service.ClienteService;
 
 @SpringBootApplication
-public class SpringDataJdbc01Application implements CommandLineRunner{
-	
+public class SpringDataJdbc01Application implements CommandLineRunner {
+
 	@Autowired
 	private ClienteService clienteService;
 
@@ -20,10 +22,18 @@ public class SpringDataJdbc01Application implements CommandLineRunner{
 
 	@Override
 	public void run(String... args) throws Exception {
-		ejecutarInsertar();
+		// ejecutarInsertar();
+		consultarClientes();
 	}
-	
-	
+
+	private void consultarClientes() {
+		List<Cliente> lista;
+		lista = clienteService.findByPaternoAndMaterno("ca", "");
+		for (Cliente r : lista) {
+			System.out.println(r.getCodigo() + " - " + r.getPaterno() + " - " + r.getMaterno());
+		}
+	}
+
 	private void ejecutarInsertar() {
 		Cliente cliente = new Cliente();
 		cliente.setCodigo(null);
