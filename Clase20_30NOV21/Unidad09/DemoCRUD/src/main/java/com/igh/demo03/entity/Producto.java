@@ -11,6 +11,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "producto")
@@ -25,13 +28,16 @@ public class Producto implements Serializable {
 	private Long id;
 
 	@Column(name = "nombre")
+	@NotEmpty
 	private String nombre;
 
 	@ManyToOne
 	@JoinColumn(name = "idcat")
 	private Categoria categoria;
 
-	@Column(name = "precio")
+	@Column(name = "precio")`
+	@NotNull
+	@Min(value = 0)
 	private Double precio;
 
 	@Column(name = "stock")

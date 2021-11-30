@@ -6,7 +6,9 @@
 	<header th:replace="plantilla/plantilla :: header"> </header>
 
 	<div class="container mt-2">
-		<form th:object="${producto}" method="post">
+		<form th:object="${producto}" method="post"
+			th:action="@{/productos/grabar}">
+			<input type="hidden" th:field="*{id}" id="id" />
 			<div class="card bg-light">
 				<div class="card-header bg-info text-white" th:text="${titulo}"></div>
 				<div class="card-body">
@@ -40,10 +42,11 @@
 				<div class="card-footer bg-light">
 					<input type="submit" class="btn btn-primary btn-sm" value="Guardar">
 				</div>
+		
 			</div>
 		</form>
 	</div>
-	
+
 	<footer th:replace="plantilla/plantilla :: footer"> </footer>
 </body>
 </html>
