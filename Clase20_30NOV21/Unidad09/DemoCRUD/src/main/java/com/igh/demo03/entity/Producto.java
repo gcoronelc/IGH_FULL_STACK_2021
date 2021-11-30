@@ -15,6 +15,7 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
+
 @Entity
 @Table(name = "producto")
 @SequenceGenerator(name = "sq_producto", sequenceName = "sq_producto", allocationSize = 1)
@@ -35,12 +36,14 @@ public class Producto implements Serializable {
 	@JoinColumn(name = "idcat")
 	private Categoria categoria;
 
-	@Column(name = "precio")`
+	@Column(name = "precio")
 	@NotNull
 	@Min(value = 0)
 	private Double precio;
 
 	@Column(name = "stock")
+	@NotNull
+	@Min(value = 0)
 	private Long stock;
 
 	public Producto() {

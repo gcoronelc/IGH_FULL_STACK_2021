@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:fragment="head">
-	<meta charset="UTF-8">
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
-	<title>APP DEMO</title>
+<meta charset="UTF-8">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+<title>APP DEMO</title>
 </head>
 <body>
 	<!-- Barra de navegación -->
@@ -14,33 +14,56 @@
 				<a class="navbar-brand" href="#"> <strong>DesarrollaSoftware</strong>
 				</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse"
-				data-target="#navbarSupportedContent"
-				aria-controls="navbarSupportedContent" aria-expanded="false"
-				aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
+					data-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
 				</button>
 				<!-- ENLACES DEL MENU -->
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav mr-auto">
 						<li class="nav-item"><a class="nav-link" th:href="@{/home}">Inicio</a></li>
-						<li class="nav-item"><a class="nav-link" th:href="@{/productos/todos}">Productos</a></li>
+						<li class="nav-item"><a class="nav-link"
+							th:href="@{/productos/todos}">Productos</a></li>
 					</ul>
 				</div>
 			</div>
 		</nav>
+
+		<!-- MENSAJES -->
+		<div class="alert alert-success alert-dismissable"
+			th:if="${success != null}">
+			<label th:text="${success}"></label>
+			<button type="button" class="close" data-dismiss="alert">&times;</button>
+		</div>
+		<div class="alert alert-danger alert-dismissable"
+			th:if="${error != null}">
+			<label th:text="${error}"></label>
+			<button type="button" class="close" data-dismiss="alert">&times;</button>
+		</div>
+		<div class="alert alert-warning alert-dismissable"
+			th:if="${warning != null}">
+			<label th:text="${warning}"></label>
+			<button type="button" class="close" data-dismiss="alert">&times;</button>
+		</div>
+		<div class="alert alert-info alert-dismissable"
+			th:if="${info != null}">
+			<label th:text="${info}"></label>
+			<button type="button" class="close" data-dismiss="alert">&times;</button>
+		</div>
+
 	</header>
-	
+
 	<!-- Contenido -->
 	<div class="container"></div>
-	
+
 	<!-- Pie de pagina -->
 	<footer th:fragment="footer"
 		class="bg-dark text-center text-white fixed-bottom">
 		<div class="container">
 			<p>Copyright Gustavo Coronel (gcoronelc.github.io) &copy;2021</p>
 		</div>
-		<script type="text/javascript"
-		th:src="@{/js/jquery.slim.min.js}"></script>
+		<script type="text/javascript" th:src="@{/js/jquery.slim.min.js}"></script>
 		<script type="text/javascript" th:src="@{/js/popper.min.js}"></script>
 		<script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
 	</footer>
