@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>DATOS DE SESIÓN</h1>
+	
+	<p>Usuario: <span th:text="${usuario}"></span> </p>
+
+	<h2>AGREGAR NUEVA PERSONA</h2>
+
+	<form th:action="@{/grabar}" method="post">
+		<div>
+			<label>Nombre: </label> <input type="text" name="nombre">
+		</div>
+		<div>
+			<label>Precio: </label> <input type="text" name="precio">
+		</div>
+		<div>
+			<input type="submit" value="Enviar">
+		</div>
+	</form>
+
+	<h2>LISTA DE PRODUCTOS</h2>
+	<div>
+		<th:block th:each="mapa:${listado}">
+			<p>
+				<span th:text="${mapa.value.nombre} + ' - ' + ${mapa.value.precio}"></span>
+				<a th:href="@{/eliminar/} + ${mapa.key}">Eliminar</a>
+			</p>
+		</th:block>
+	</div>
+
+
+	<h2>LIMPIAR LISTA</h2>
+	<a th:href="@{/fin}" th:text="'Limpiar'"></a>
+
+</body>
+</html>
+
+
