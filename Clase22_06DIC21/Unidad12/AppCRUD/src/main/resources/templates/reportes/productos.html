@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="plantilla/plantilla :: head">
+</head>
+<body>
+	<header th:replace="plantilla/plantilla :: header"> </header>
+
+	<div class="container">
+		<h1>Reporte de Productos</h1>
+
+		<div class="card bg-light mt-2">
+			<div class="card-body">
+				<div class="form-group row">
+					<label class="col-md-2" for="nombre">Categoría:</label>
+					<div class="col-md-10">
+						<input type="text" name="categoria"
+							class="form-control form-control-sm" id="categoria"
+							placeholder="Ingrese código de categoría." /> 
+					</div>
+				</div>
+			</div>
+			<div class="card-footer bg-light">
+				<input id="btnVerReporte" type="button"
+					class="btn btn-primary btn-sm" value="Ver Reporte"> 
+				<input id="btnDescargarReporte" type="button"
+					class="btn btn-primary btn-sm" value="Descargar Reporte"> 
+				<a href="#" target="_blank" id="lnkDescargarReporte" name="lnkDescargarReporte"
+					 style="display: none;">Descargar Reporte</a>
+			</div>
+		</div>
+
+		<div id="divReporte" class="card bg-light mt-2" style="display: none;">
+			<div id="divVerReporte" class="card-body"></div>
+		</div>
+
+	</div>
+
+	<footer th:replace="plantilla/plantilla :: footer"> </footer>
+	
+	<script type="text/javascript">
+	
+	$(function() {
+	    $("#btnVerReporte").click(fnVerReporte);
+	    $("#btnDescargarReporte").click(fnDescargarReporte);
+	});
+	
+	function fnVerReporte(){
+		let categoria = $("#categoria").val();
+		let urlRepo = "/reportes/productos1?categoria=" + categoria;
+		let html = "<object width='100%' height='600' data='" + urlRepo + "'></object>";
+		$("#divVerReporte").html(html);
+		$("#divReporte").show();
+	}
+	
+	function fnDescargarReporte(){
+		let categoria = $("#categoria").val();
+		let destino = "/reportes/productos2?categoria=" + categoria;
+		$("#lnkDescargarReporte").attr("href",destino);
+		document.getElementById("lnkDescargarReporte").click();
+	}
+	
+	
+	</script>
+
+</body>
+</html>

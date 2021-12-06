@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="plantilla/plantilla :: head">
+</head>
+<body>
+	<header th:replace="plantilla/plantilla :: header"> </header>
+
+	<div class="container mt-2">
+
+		<h1>Reporte de Categorias</h1>
+		
+		<div class="card bg-light mt-2">
+			<div class="card-body">
+				<input id="btnVerReporte" type="button" class="btn btn-primary btn-sm" value="Ver Reporte">
+				<a type="button" th:href="@{/reportes/categorias2}" target="_blank" class="btn btn-primary btn-sm">Descargar Reporte</a>
+			</div>
+		</div>
+		
+		<div id="divReporte" class="card bg-light mt-2" style="display: none;">
+			<div id="divVerReporte" class="card-body">
+			</div>
+		</div>
+
+	</div>
+
+	<footer th:replace="plantilla/plantilla :: footer"> </footer>
+
+	<script type="text/javascript">
+	
+	$(function() {
+	    $("#btnVerReporte").click(fnVerReporte);
+	});
+	
+	function fnVerReporte(){
+		let urlRepo = "/reportes/categorias1";
+		let html = "<object width='100%' height='600' data='" + urlRepo + "'></object>";
+		$("#divVerReporte").html(html);
+		$("#divReporte").show();
+	}
+	
+	
+	</script>
+
+</body>
+</html>
