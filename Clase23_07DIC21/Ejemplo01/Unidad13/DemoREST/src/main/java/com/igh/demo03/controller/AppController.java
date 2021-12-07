@@ -1,5 +1,6 @@
 package com.igh.demo03.controller;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -36,6 +37,7 @@ public class AppController {
 		return respuesta;
 	}
 	
+	@CrossOrigin(origins = "http://127.0.0.1:5500")
 	@PostMapping("/sumar2")
 	public String sumar2(@RequestBody DatosDto datosDto) {
 		int suma = datosDto.getNum1() + datosDto.getNum2();

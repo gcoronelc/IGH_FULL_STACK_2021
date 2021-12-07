@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>CONSULTA POR PATERNO</h1>
+    <form>
+      <label>Paterno: </label>
+      <input type="text" name="paterno" id="paterno" />
+      <input type="button" id="btnConsultar" value="Consultar" />
+    </form>
+    <br />
+    <table border="1">
+      <thead>
+        <tr>
+          <th>CODIGO</th>
+          <th>PATERNO</th>
+          <th>MATERNO</th>
+          <th>NOMBRE</th>
+        </tr>
+      </thead>
+      <tbody id="tabla-datos"></tbody>
+    </table>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+      $("#btnConsultar").click(function () {
+        let paterno = $("#paterno").val();
+        let path = "http://localhost:9090/api/v1/clientes/paterno/" + paterno;
+        $.ajax({
+          url: path,
+        }).then(function (data) {
+          let cuerpoTabla = "";
+          for (let i = 0; i < data.length; i++) {
+            cuerpoTabla += "<tr>";
+            cuerpoTabla += "<td>" + data[i].codigo + "</td>";
+            cuerpoTabla += "<td>" + data[i].paterno + "</td>";
+            cuerpoTabla += "<td>" + data[i].materno + "</td>";
+            cuerpoTabla += "<td>" + data[i].nombre + "</td>";
+            cuerpoTabla += "</td>";
+          }
+          $("#tabla-datos").empty();
+          $("#tabla-datos").append(cuerpoTabla);
+        });
+      });
+    </script>
+  </body>
+</html>

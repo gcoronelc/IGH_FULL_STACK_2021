@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>CREAR CLIENTE</h1>
+    <form id="form1">
+      <label>Paterno: </label>
+      <input type="text" id="paterno" /> <br />
+      <label>Materno: </label>
+      <input type="text" id="materno" /> <br />
+      <label>Nombre: </label>
+      <input type="text" id="nombre" /> <br />
+      <label>DNI: </label>
+      <input type="text" id="dni" /> <br />
+      <label>Ciudad: </label>
+      <input type="text" id="ciudad" /> <br />
+      <label>Dirección: </label>
+      <input type="text" id="direccion" /> <br />
+      <input type="button" id="btnCrear" value="Crear" />
+    </form>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script>
+      $("#btnCrear").click(function () {
+        // Datos
+        let paterno = $("#paterno").val();
+        let materno = $("#materno").val();
+        let nombre = $("#nombre").val();
+        let dni = $("#dni").val();
+        let ciudad = $("#ciudad").val();
+        let direccion = $("#direccion").val();
+
+        // AJAX - Inicio
+        $.ajax({
+          url: "http://localhost:9090/api/v1/clientes",
+          type: "POST",
+          data: JSON.stringify({
+            paterno: paterno,
+            materno: materno,
+            nombre: nombre,
+            dni: dni,
+            ciudad: ciudad,
+            direccion: direccion,
+          }),
+          contentType: "application/json; charset=utf-8",
+          success: function (data) {
+            console.log(data);
+            alert("Registro aregado exitosamente !!!\nCódigo: " + data.codigo);
+          },
+          failure: function (data) {
+            console.log(data);
+            alert(data.responseJSON.message);
+          },
+          error: function (data) {
+            console.log(data);
+            alert(data.responseJSON.message);
+          },
+        });
+        // AJAX - Fin
+      });
+    </script>
+  </body>
+</html>
