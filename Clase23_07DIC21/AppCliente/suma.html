@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SUMAR</title>
+  </head>
+  <body>
+    <h1>SUMAR</h1>
+    <form>
+      <div>Número 1: <input type="text" name="num1" id="num1" /></div>
+      <div>Número 2: <input type="text" name="num2" id="num2" /></div>
+      <div>
+        <input type="button" id="btnProcesar" value="Procesar" />
+      </div>
+    </form>
+    <h1>RESPUESTA</h1>
+    <div id="divRespuesta"></div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+      $(function () {
+        $("#btnProcesar").click(fnProcesar);
+      });
+
+      function fnProcesar() {
+        let num1 = parseInt($("#num1").val());
+        let num2 = parseInt($("#num2").val());
+
+        // AJAX - Inicio
+        $.ajax({
+          url: "http://localhost:8080/api/v1/app/sumar2",
+          type: "POST",
+          data: JSON.stringify({
+            num1: num1,
+            num2: num2,
+          }),
+          contentType: "application/json; charset=utf-8",
+          success: function (data) {
+            console.log(data);
+            $("#divRespuesta").html(data);
+          },
+          failure: function (data) {
+            console.log(data);
+            alert(data.responseJSON.message);
+          },
+          error: function (data) {
+            console.log(data);
+            alert(data.responseJSON.message);
+          },
+        });
+        // AJAX - Fin
+      }
+    </script>
+  </body>
+</html>
