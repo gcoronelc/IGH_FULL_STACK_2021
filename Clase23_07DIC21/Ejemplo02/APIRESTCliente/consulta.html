@@ -30,6 +30,7 @@
       $("#btnConsultar").click(function () {
         let paterno = $("#paterno").val();
         let path = "http://localhost:9090/api/v1/clientes/paterno/" + paterno;
+        $("#tabla-datos").empty();
         $.ajax({
           url: path,
         }).then(function (data) {
@@ -42,7 +43,6 @@
             cuerpoTabla += "<td>" + data[i].nombre + "</td>";
             cuerpoTabla += "</td>";
           }
-          $("#tabla-datos").empty();
           $("#tabla-datos").append(cuerpoTabla);
         });
       });
